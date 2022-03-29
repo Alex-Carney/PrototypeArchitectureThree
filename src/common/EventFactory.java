@@ -15,6 +15,8 @@ import java.util.Arrays;
  *
  * @author Sten Leinasaar
  *         Last Edit: March 23, 2022
+ * @author Alex Carney
+ *         Last Edit: March 29, 2022
  */
 public class EventFactory implements EventDispatcher {
 
