@@ -1,6 +1,6 @@
 package common;
 
-public class User {
+public class User implements Payload {
     private String email;
 
     private String userName;

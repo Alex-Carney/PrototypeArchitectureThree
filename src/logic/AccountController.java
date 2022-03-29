@@ -1,5 +1,6 @@
 package logic;
 
+import common.EventFactory;
 import common.EventType;
 import frontend.events.UserChangePasswordEvent;
 import frontend.events.UserCreateAccountEvent;
@@ -7,6 +8,7 @@ import frontend.events.UserDeleteAccountEvent;
 import frontend.events.UserLoginEvent;
 import frontend.events.AccountEvent;
 import common.User;
+import logic.events.UserLoginResponseEvent;
 import persistence.MockDatabase;
 
 import java.beans.PropertyChangeEvent;
@@ -25,15 +27,15 @@ public class AccountController implements PropertyChangeListener {
      */
     //private final UserValidationService userValidationService;
     //private final PasswordService passwordService;
-    private final AccountResponseDispatcher eventDispatcher;
+    private final EventFactory eventFactory;
 
-    public AccountController(AccountResponseDispatcher eventDispatcher
+    public AccountController(
         /*UserValidationService userValidationService,
         PasswordService passwordService*/
     ) {
         //this.validationService = validationService;
         //this.passwordService = passwordService
-        this.eventDispatcher = eventDispatcher;
+        this.eventFactory = EventFactory.getInstance();
     }
 
     /**
@@ -103,12 +105,13 @@ public class AccountController implements PropertyChangeListener {
         agree on a single standard, however)
          */
         if (evt instanceof UserLoginEvent) {
-            System.out.println("UserLoginEvent detected, handling accordingly");
-            this.eventDispatcher.accountEventResponseFactory(EventType.USER_LOGIN_RESPONSE,
+            System.out.println("UserLoginEvent detected in controller, handling accordingly");
+            UserLoginResponseEvent ulre = (UserLoginResponseEvent) this.eventFactory.createEvent(EventType.USER_LOGIN_RESPONSE, this,
                 associatedUser,
                 userIsValid,
-                userIsValid ? "Logged in" : "Invalid credentials");
-
+                userIsValid ? "Logged in" : "Invalid credentials"
+                );
+            this.eventFactory.fireEvent(ulre);
         } else if (evt instanceof UserCreateAccountEvent) {
             System.out.println("UserCreateAccountEvent detected, handling accordingly");
         } else if (evt instanceof UserDeleteAccountEvent) {

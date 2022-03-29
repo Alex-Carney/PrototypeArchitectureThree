@@ -2,6 +2,7 @@ package common;
 
 import frontend.AccountResponseController;
 import frontend.FrontEndEventDispatcher;
+import frontend.events.UserLoginEvent;
 import logic.AccountController;
 import logic.AccountResponseDispatcher;
 import persistence.MockDatabase;
@@ -9,10 +10,7 @@ import persistence.MockDatabase;
 public class Main {
 
     private final EventManager eventManager;
-
-    private final FrontEndEventDispatcher frontEndEventDispatcher;
-
-    private final AccountResponseDispatcher logicEndEventDispatcher;
+    private final EventFactory eventFactory;
 
     private final MockDatabase database;
 
@@ -20,9 +18,8 @@ public class Main {
         // The main method is where the EventManager is created for the first (and only) time
         eventManager = EventManager.getInstance();
 
-        // This may be the home page or something of those sorts
-        frontEndEventDispatcher = new FrontEndEventDispatcher();
-        logicEndEventDispatcher = new AccountResponseDispatcher();
+
+        eventFactory = EventFactory.getInstance();
 
 
         /*
@@ -32,7 +29,7 @@ public class Main {
         can be supplied here! Thanks to the Java spread operator ...
          */
         eventManager.addPropertyChangeListener(
-            new AccountController(logicEndEventDispatcher),
+            new AccountController(),
             EventType.USER_LOGIN, EventType.USER_CREATE_ACCOUNT);
         eventManager.addPropertyChangeListener(new AccountResponseController(),
             EventType.USER_LOGIN_RESPONSE);
@@ -46,7 +43,14 @@ public class Main {
             "password",
             false);
 
-        frontEndEventDispatcher.fireLoginEvent(fakeUser);
+        UserLoginEvent ule =
+            (UserLoginEvent) eventFactory.createEvent(
+                EventType.USER_LOGIN,
+                this,
+                fakeUser
+            );
+        eventFactory.fireEvent(ule);
+
 
         // Tracer bullet 2. Should fail
         User fakeUser2 = new User(
@@ -56,7 +60,13 @@ public class Main {
             false
             );
 
-        frontEndEventDispatcher.fireLoginEvent(fakeUser2);
+        UserLoginEvent ule2 =
+            (UserLoginEvent) eventFactory.createEvent(
+                EventType.USER_LOGIN,
+                this,
+                fakeUser2
+            );
+        eventFactory.fireEvent(ule2);
 
     }
 

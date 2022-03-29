@@ -9,8 +9,8 @@ import java.beans.PropertyChangeEvent;
 
 public abstract class AccountEvent extends PropertyChangeEvent {
 
-    private EventType eventType;
-    protected final User user;
+
+    private final User user;
 
     /**
      * Constructs a new {@code PropertyChangeEvent}.
@@ -26,9 +26,7 @@ public abstract class AccountEvent extends PropertyChangeEvent {
     public User getUser() {
         return user;
     }
-    public EventType getEventType() {
-        return eventType;
-    }
+    public abstract EventType getEventType();
 
 }
 

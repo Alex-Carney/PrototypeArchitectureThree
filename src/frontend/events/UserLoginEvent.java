@@ -21,8 +21,8 @@ public class UserLoginEvent extends AccountEvent {
      * @param user The un-authorized user associated with the event
      * @throws IllegalArgumentException if {@code source} is {@code null}
      */
-    public UserLoginEvent(Object source, User user) {
-        super(source, eventType, user);
+    public UserLoginEvent(Object source, Object... args) {
+        super(source, eventType, (User) args[0]);
     }
 
 

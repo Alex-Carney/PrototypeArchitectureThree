@@ -10,7 +10,7 @@ public final class EventManager {
 
     private final PropertyChangeSupport support;
 
-    public EventManager() {
+    private EventManager() {
         support = new PropertyChangeSupport(this);
     }
 

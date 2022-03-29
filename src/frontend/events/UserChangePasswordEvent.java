@@ -11,7 +11,6 @@ import common.User;
 public class UserChangePasswordEvent extends AccountEvent {
 
 
-    private final User user;
     private final String newPassword;
     private static final EventType eventType = EventType.USER_CHANGE_PASSWORD;
 
@@ -23,16 +22,10 @@ public class UserChangePasswordEvent extends AccountEvent {
      * @param newPassword The proposed new password for the user
      * @throws IllegalArgumentException if {@code source} is {@code null}
      */
-    public UserChangePasswordEvent(Object source, User user, String newPassword) {
-        super(source, eventType, user);
-        this.user = user;
-        this.newPassword = newPassword;
+    public UserChangePasswordEvent(Object source, Object... args) {
+        super(source, eventType, (User) args[0]);
+        this.newPassword = (String) args[1];
 
-    }
-
-    @Override
-    public User getUser() {
-        return user;
     }
 
     @Override
