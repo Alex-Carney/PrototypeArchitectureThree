@@ -60,30 +60,35 @@ public class EventFactory implements EventDispatcher {
      *            Source that fired the update.
      * @param args
      *            Vararg of Object type.
+     * @throws IllegalArgumentException If input types do not match enum
      * @return An event of type that was specified.
      */
     public PropertyChangeEvent createEvent(EventType event, Object source,
         Object... args) {
 
+        /*
+        Before an event can be instantiated, the input parameters into the
+        factory must be validated. This is done using the reflection API
+         */
         Object[] eventArgumentList = event.getArgumentList();
-
-
-
         for (int i = 0; i < eventArgumentList.length; i++) {
-//            Class<?> clazz = args[i].getClass();
             Class<?> clazz = args[i].getClass();
             if (clazz != eventArgumentList[i]) {
                 throw new IllegalArgumentException(
                     "Argument data types do not match enum"
                 );
             }
+            /*
+            Require that all parameters are marked as a Payload
+             */
             if (!Arrays.asList(clazz.getInterfaces()).contains(Payload.class)) {
                 System.out.println("Warning: Using non payload, argument type " + clazz);
             }
-
         }
-
-
+        /*
+         * Now that input parameters have been validated, proceed with
+         * event creation
+         */
         switch (event) {
             case USER_CREATE_ACCOUNT:
                 return new UserCreateAccountEvent(source, args);

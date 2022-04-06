@@ -30,7 +30,11 @@ public class Main {
          */
         eventManager.addPropertyChangeListener(
             new AccountController(),
-            EventType.USER_LOGIN, EventType.USER_CREATE_ACCOUNT);
+            EventType.USER_LOGIN,
+            EventType.USER_CREATE_ACCOUNT,
+            EventType.USER_CHANGE_PASSWORD,
+            EventType.USER_CHANGE_PASSWORD,
+            EventType.USER_DELETE_ACCOUNT);
         eventManager.addPropertyChangeListener(new AccountResponseController(),
             EventType.USER_LOGIN_RESPONSE);
 

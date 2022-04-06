@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a03963f6-19c4-4764-8113-40765543acb1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrototypeArchitectureThree.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/common/EventDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/common/EventFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/common/EventManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/common/EventType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/common/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/common/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/frontend/AccountResponseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/frontend/FrontEndEventDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/frontend/events/AccountEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/frontend/events/UserChangePasswordEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/frontend/events/UserCreateAccountEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/frontend/events/UserDeleteAccountEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/frontend/events/UserLoginEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/logic/AccountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/logic/AccountResponseDispatcher$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/logic/AccountResponseDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/logic/events/AccountResponseEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/logic/events/UserLoginResponseEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrototypeArchitectureThree/persistence/MockDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/EventDispatcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/EventFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/EventManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/EventType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/AccountEventFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/AccountResponseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/FrontEndEventDispatcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/events/AccountEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/events/UserChangePasswordEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/events/UserCreateAccountEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/events/UserDeleteAccountEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/events/UserLoginEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/AccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/AccountResponseDispatcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/events/AccountResponseEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/events/UserLoginResponseEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/persistence/MockDatabase.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="26nVbXfAa4fRtyj55s2xKNvHBm9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cs326s2022@bits.monead.com" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a03963f6-19c4-4764-8113-40765543acb1" name="Default Changelist" comment="" />
+      <created>1648059409260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648059409260</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -6,7 +6,6 @@ import common.User;
 import java.beans.PropertyChangeEvent;
 
 public abstract class AccountResponseEvent extends PropertyChangeEvent {
-    private EventType eventType;
     protected final User user;
     protected final boolean rejected;
     protected final String responseMessage;
@@ -20,9 +19,6 @@ public abstract class AccountResponseEvent extends PropertyChangeEvent {
 
     public User getUser() {
         return user;
-    }
-    public EventType getEventType() {
-        return eventType;
     }
     public String getResponseMessage() {
         return responseMessage;
